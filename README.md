@@ -73,11 +73,10 @@ This is a recipe application. The goal of this project was to learn MERN stack (
 
 ### Built With
 
-* [![HTML][HTML]][Html-url]
+* [![React][React.js]][React-url]
 * [![CSS][CSS]][Css-url]
 * [![JavaScript][JavaScript]][JavaScript-url]
 * [![Github Pages][GithubPages]][GithubPages-url]
-* React
 * Insomnia
 * MongoDB Atlass / Compass
 
@@ -110,6 +109,7 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 * [Shields.io](https://shields.io/docs/logos)
 * [Simple Icons](https://simpleicons.org/?q=mit+li)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
+* [React Icons](https://react-icons.github.io/react-icons/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,4 +130,6 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 [javascript-url]: https://www.javascript.com/
 [GithubPages]: https://img.shields.io/badge/githubpages-0d74e7?style=for-the-badge&logo=githubpages&logoColor=black
 [GithubPages-url]: https://pages.github.com/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
 
