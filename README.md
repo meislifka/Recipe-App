@@ -75,10 +75,9 @@ This is a recipe application. The goal of this project was to learn MERN stack (
 
 * [![React][React.js]][React-url]
 * [![CSS][CSS]][Css-url]
-* [![JavaScript][JavaScript]][JavaScript-url]
+* [![Insomnia][Insomnia]][Insomnia-url]
+* [![MongoDB Atlas][MongoDBAtlas]][MongoDBAtlas-url]
 * [![Github Pages][GithubPages]][GithubPages-url]
-* Insomnia
-* MongoDB Atlass / Compass
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -132,4 +131,7 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 [GithubPages-url]: https://pages.github.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-
+[Insomnia]: https://img.shields.io/badge/Insomnia-7e63fb?style=for-the-badge&logo=insomnia&logoColor=white
+[Insomnia-url]: https://insomnia.rest/
+[MongoDBAtlas]: https://img.shields.io/badge/MongoDB%20Atlas-00684A?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDBAtlas-url]: https://www.mongodb.com/atlas
