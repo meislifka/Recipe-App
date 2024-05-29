@@ -4,15 +4,48 @@ import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
 export const Auth = () => {
-  return <div className="auth">
+  return (<div className="auth">
     <Login />
     <Register />
-  </div>;
+  </div>
+  );
 };
 
 const Login = () => {
+  // only need access to cookie (setCookie)   access_token = name of cookie
+  const [_, setCookies] = useCookies(["access_token"])
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+
+
+  const navigate = useNavigate();
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:3001/auth/login", {
+        username,
+        password,
+      });
+
+      //response json being sent from route is (users.js) token, userId
+      setCookies("access_token", response.data.token);
+      window.localStorage.setItem("userID", response.data.userID);
+
+      //when logged in redirect to home page
+      navigate("/");
+
+      console.log(username);
+      console.log(password)
+
+
+    } catch (err) {
+      console.error(err);
+
+    }
+
+  }
   return (
     <Form
       username={username}
@@ -20,6 +53,7 @@ const Login = () => {
       password={password}
       setPassword={setPassword}
       label="Login"
+      onSubmit={onSubmit}
     />
   );
 
@@ -43,7 +77,6 @@ const Register = () => {
 
     } catch (err) {
       console.error(err);
-      alert("error");
     };
 
   }
