@@ -1,6 +1,11 @@
 import { useState } from 'react'
-
+import axios from 'axios'
+import { useGetUserID } from '../hooks/useGetuserID';
+import { useNavigate } from 'react-router-dom';
 export const CreateRecipe = () => {
+
+  //from the hooks folder
+  const userID = useGetUserID();
 
   const [recipe, setRecipe] = useState({
     name: "",
@@ -8,8 +13,10 @@ export const CreateRecipe = () => {
     instructions: "",
     imageUrl: "",
     cookingTime: 0,
-    userOwner: 0,
+    userOwner: userID,
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -24,17 +31,26 @@ export const CreateRecipe = () => {
   };
 
   const addIngredient = () => {
-    // set recipe object  but change ingred list ( what it was before plus empty str to end of array)
+    // set recipe object but change ingred list ( what it was before plus empty str to end of array)
     const ingredients = [...recipe.ingredients, ""];
     setRecipe({ ...recipe, ingredients });
   };
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("http://localhost:3001/recipes", recipe);
+      alert("Recipe Created");
+      navigate("/");
 
-  console.log(recipe);
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return (
     <div className="create-recipe">
       <h2>Create Recipe</h2>
-      <form>
+      <form onSubmit={onSubmit}>
         <label htmlFor="name">Name</label>
         <input
           type="text"
