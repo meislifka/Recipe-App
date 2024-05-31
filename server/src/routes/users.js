@@ -53,4 +53,19 @@ router.post("/login", async (req, res) => {
 
 });
 
-export { router as userRouter }; 
+export { router as userRouter };
+
+//middleware
+export const verifyToken = (req, res, next) => {
+  const token = req.headers.authorization;
+  const TOKEN = process.env.TOKEN;
+  console.log(token)
+  if (token) {
+    jwt.verify(token, TOKEN, (err) => {
+      if (err) return res.sendStatus(403); //wrong token
+      next();
+    });
+  } else {
+    res.sendStatus(401); //no token
+  }
+}

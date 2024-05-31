@@ -1,8 +1,7 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import { RecipeModel } from "../models/Recipes.js";
 import { UserModel } from "../models/Users.js";
-
+import { verifyToken } from './users.js';
 
 const router = express.Router();
 
@@ -17,7 +16,7 @@ router.get("/", async (req, res) => {
 });
 
 //create new recipe
-router.post("/", async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
   const recipe = new RecipeModel(req.body);
   try {
     const response = await recipe.save({});
@@ -29,16 +28,16 @@ router.post("/", async (req, res) => {
 
 
 //save recipe route
-router.put("/", async (req, res) => {
+router.put("/", verifyToken, async (req, res) => {
   try {
     //get recipe
     const recipe = await RecipeModel.findById(req.body.recipeID);
 
     //get user
-    const user = await UserMode.findById(req.body.userID);
+    const user = await UserModel.findById(req.body.userID);
     user.savedRecipes.push(recipe);
     await user.save(); //save user to collection
-    res.json({ savedRecipes: user.savedRecipes });
+    res.json({ savedRecipes: user.savedRecipes }); //list of saved recipes
 
   } catch (err) {
     res.json(err);

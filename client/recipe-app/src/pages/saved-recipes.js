@@ -4,6 +4,7 @@ import axios from "axios";
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);
+
   const userID = useGetUserID();
 
   useEffect(() => {
@@ -20,6 +21,8 @@ export const SavedRecipes = () => {
 
     fetchSavedRecipes();
   }, []);
+
+
   return (
     <div>
       <h1>Saved Recipes</h1>
@@ -29,7 +32,9 @@ export const SavedRecipes = () => {
             <div>
               <h2>{recipe.name}</h2>
             </div>
-            <p>{recipe.description}</p>
+            <div className="instructions">
+              <p>{recipe.instructions}</p>
+            </div>
             <img src={recipe.imageUrl} alt={recipe.name} />
             <p>Cooking Time: {recipe.cookingTime} minutes</p>
           </li>

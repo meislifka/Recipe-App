@@ -35,14 +35,8 @@ const Login = () => {
 
       //when logged in redirect to home page
       navigate("/");
-
-      console.log(username);
-      console.log(password)
-
-
     } catch (err) {
       console.error(err);
-
     }
 
   }
