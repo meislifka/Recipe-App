@@ -120,7 +120,7 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 [license-url]: https://github.com/meislifka/Recipe-App/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=0d74e7
 [linkedin-url]: https://linkedin.com/in/meislifka
-[product-screenshot]: images/higherlowerstocks.jpg
+[product-screenshot]: client/recipe-app/public/homePage.jpg
 [HTML]: https://img.shields.io/badge/html-FF5733?style=for-the-badge&logo=html5&logoColor=white
 [Html-url]: https://html.com/
 [Css]: https://img.shields.io/badge/Css-2965f1?style=for-the-badge&logo=css3&logoColor=white
