@@ -83,7 +83,7 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [MERN Recipe App with Authentication](https://www.youtube.com/watch?v=P43DW3HUUH8&ab_channel=PedroTech)
+* [MERN Recipe App with Authentication Tutorial](https://www.youtube.com/watch?v=P43DW3HUUH8&ab_channel=PedroTech)
 * [Shields.io](https://shields.io/docs/logos)
 * [Simple Icons](https://simpleicons.org/?q=mit+li)
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
