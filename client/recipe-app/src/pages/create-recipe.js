@@ -3,6 +3,8 @@ import axios from 'axios'
 import { useGetUserID } from '../hooks/useGetuserID';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import '../tailwind.css'; // Import Tailwind CSS
+import '../App.css';
 
 export const CreateRecipe = () => {
 
@@ -24,7 +26,8 @@ export const CreateRecipe = () => {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setRecipe({ ...recipe, [name]: value }); //... set new one to same as before but with value added to name arr
+    const newValue = value < 0 ? 0 : value; // Prevent negative value
+    setRecipe({ ...recipe, [name]: newValue }); //... set new one to same as before but with value added to name arr
   }
 
   const handleIngredChange = (event, idx) => {
@@ -53,9 +56,9 @@ export const CreateRecipe = () => {
   }
   return (
     <div className="create-recipe">
-      <h2>Create Recipe</h2>
+      <h2 className='text-2xl font-bold'>Create Recipe</h2>
       <form onSubmit={onSubmit}>
-        <label htmlFor="name">Name</label>
+        <label className="mt-3" htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
@@ -63,26 +66,27 @@ export const CreateRecipe = () => {
           value={recipe.name}
           onChange={handleChange}
         />
-        <label htmlFor="ingredients"> Ingredients</label>
+        <label className="mt-3" htmlFor="ingredients"> Ingredients</label>
         {recipe.ingredients.map((ingredient, idx) => (
           <input
+            className="mt-1"
             key={idx}
             type="text"
             name="ingredients"
             value={ingredient}
             onChange={(event) => handleIngredChange(event, idx)} />
         ))}
-        <button type="button" onClick={addIngredient}>
+        <button className="border border-black bg-[#bab9b9]  mt-2 rounded font-bold text-black px-4 py-2 hover:bg-[#2b4f1e] hover:text-white hover:border-transparent transition duration-300 ease-in-out" type="button" onClick={addIngredient}>
           Add Ingredient
         </button>
-        <label htmlFor="instructions">Instructions</label>
+        <label className="mt-3" htmlFor="instructions">Instructions</label>
         <textarea
           id="instructions"
           name="instructions"
           value={recipe.instructions}
           onChange={handleChange}
         ></textarea>
-        <label htmlFor="imageUrl">Image URL</label>
+        <label className="mt-3" htmlFor="imageUrl">Image URL</label>
         <input
           type="text"
           id="imageUrl"
@@ -90,7 +94,7 @@ export const CreateRecipe = () => {
           value={recipe.imageUrl}
           onChange={handleChange}
         />
-        <label htmlFor="cookingTime">Cooking Time (mins)</label>
+        <label className="mt-3" htmlFor="cookingTime">Cooking Time (mins)</label>
         <input
           type="number"
           id="cookingTime"
@@ -98,7 +102,7 @@ export const CreateRecipe = () => {
           value={recipe.cookingTime}
           onChange={handleChange}
         />
-        <button type="submit">
+        <button className="border border-black bg-[#bab9b9] rounded font-bold text-black px-4 py-2 hover:bg-[#2b4f1e] hover:text-white hover:border-transparent transition duration-300 ease-in-out mt-3" type="submit">
           Create Recipe
         </button>
       </form>

@@ -75,16 +75,18 @@ a {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: white;
+  background-color: #D2B48C;
   border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin: 20px;
   width: 400px;
+
 }
 
 .create-recipe form {
   display: flex;
   flex-direction: column;
+
 }
 
 ul {

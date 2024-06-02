@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetuserID.js";
 import axios from "axios";
 import { useCookies } from "react-cookie";
+import '../tailwind.css';
+
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -59,7 +61,7 @@ export const Home = () => {
       <ul>
         {recipes.map((recipe) => (
           <li key={recipe._id}>
-            <div>
+            <div className="bg-[#D2B48C] p-4 rounded-lg shadow-md">
               <h2>{recipe.name}</h2>
               <button
                 onClick={() => saveRecipe(recipe._id)}

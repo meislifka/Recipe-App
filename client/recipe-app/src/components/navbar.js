@@ -23,7 +23,7 @@ export const Navbar = () => {
       ) : (
         <>
           <Link to="/saved-recipes">Saved Recipes</Link>
-          <button onClick={logout}> Logout </button>
+          <button className="text-2xl ml-4" onClick={logout}> Logout </button>
         </>
       )}
     </div>
