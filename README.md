@@ -53,10 +53,9 @@ This is a recipe application. The goal of this project was to learn MERN stack (
 ### Built With
 
 * [![React][React.js]][React-url]
-* [![CSS][CSS]][Css-url]
+* [![Tailwind][Tailwind.css]][Tailwind-url]
 * [![Insomnia][Insomnia]][Insomnia-url]
 * [![MongoDB Atlas][MongoDBAtlas]][MongoDBAtlas-url]
-* [![Github Pages][GithubPages]][GithubPages-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -106,11 +105,11 @@ Project Link: [https://github.com/meislifka/Recipe-App](https://github.com/meisl
 [Css-url]: [https://reactjs.org/](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [Javascript]: https://img.shields.io/badge/JavaScript-f0db4f?style=for-the-badge&logo=javascript&logoColor=black
 [javascript-url]: https://www.javascript.com/
-[GithubPages]: https://img.shields.io/badge/githubpages-0d74e7?style=for-the-badge&logo=githubpages&logoColor=black
-[GithubPages-url]: https://pages.github.com/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Insomnia]: https://img.shields.io/badge/Insomnia-7e63fb?style=for-the-badge&logo=insomnia&logoColor=white
 [Insomnia-url]: https://insomnia.rest/
 [MongoDBAtlas]: https://img.shields.io/badge/MongoDB%20Atlas-00684A?style=for-the-badge&logo=mongodb&logoColor=white
 [MongoDBAtlas-url]: https://www.mongodb.com/atlas
+[Tailwind.css]: https://img.shields.io/badge/tailwindcss-32D1FF.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
+[Tailwind-url]: https://tailwind.com/
