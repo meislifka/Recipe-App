@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
+import '../tailwind.css'; // Import Tailwind CSS
+import '../App.css';
 
 export const Auth = () => {
   return (<div className="auth">
@@ -89,7 +91,7 @@ const Register = () => {
 
 const Form = ({ username, setUsername, password, setPassword, label, onSubmit }) => {
   return (
-    < div className="auth-container" >
+    < div className="flex flex-col justify-center items-center p-5 bg-white rounded shadow-md m-5 w-[400px]" >
       <form onSubmit={onSubmit}>
         <h2>{label}</h2>
         <div className="form-group">
@@ -97,6 +99,7 @@ const Form = ({ username, setUsername, password, setPassword, label, onSubmit })
           <input
             type="text"
             id="username"
+            className="border-2 border-black"
             value={username}
             onChange={(event) => setUsername(event.target.value)}
           />
@@ -107,11 +110,12 @@ const Form = ({ username, setUsername, password, setPassword, label, onSubmit })
           <input
             type="password"
             id="password"
+            className="border-2 border-black"
             value={password}
             onChange={(event) => setPassword(event.target.value)} />
         </div>
 
-        <button type="submit">{label}</button>
+        <button className="bg-grey border-2 border-black rounded-md px-1" type="submit">{label}</button>
       </form>
     </div >
   );

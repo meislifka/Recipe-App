@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetuserID.js";
 import axios from "axios";
+import '../tailwind.css'; // Import Tailwind CSS
+import '../App.css';
 
 export const SavedRecipes = () => {
   const [savedRecipes, setSavedRecipes] = useState([]);

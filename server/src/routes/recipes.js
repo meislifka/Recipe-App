@@ -2,6 +2,8 @@ import express from 'express';
 import { RecipeModel } from "../models/Recipes.js";
 import { UserModel } from "../models/Users.js";
 import { verifyToken } from './users.js';
+import '../tailwind.css'; // Import Tailwind CSS
+import '../App.css';
 
 const router = express.Router();
 
