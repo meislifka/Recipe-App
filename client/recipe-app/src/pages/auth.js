@@ -42,6 +42,8 @@ const Login = () => {
     }
 
   }
+
+
   return (
     <Form
       username={username}
@@ -59,6 +61,7 @@ const Login = () => {
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordCheck, checkPassword] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault(); //wont refresh page when sent
@@ -81,11 +84,14 @@ const Register = () => {
       username={username}
       setUsername={setUsername}
       password={password}
+      checkPassword={checkPassword}
       setPassword={setPassword}
       label="Register"
       onSubmit={onSubmit}
     />
+
   );
+
 
 };
 
@@ -93,7 +99,7 @@ const Form = ({ username, setUsername, password, setPassword, label, onSubmit })
   return (
     < div className="flex flex-col justify-center items-center p-5 bg-white rounded shadow-md m-5 w-[400px]" >
       <form onSubmit={onSubmit}>
-        <h2>{label}</h2>
+        <h2 className="font-bold text-xl">{label}</h2>
         <div className="form-group">
           <label htmlFor="username">Username: </label>
           <input
@@ -113,9 +119,12 @@ const Form = ({ username, setUsername, password, setPassword, label, onSubmit })
             className="border-2 border-black"
             value={password}
             onChange={(event) => setPassword(event.target.value)} />
+
         </div>
 
-        <button className="bg-grey border-2 border-black rounded-md px-1" type="submit">{label}</button>
+        <button className="bg-grey border-2 border-black rounded-md px-1 hover:bg-green-500" type="submit">{label}</button>
+        {/*  <button className="text-[#46a2dc] ml-4 underline"  >  Sign up </button> */}
+
       </form>
     </div >
   );
