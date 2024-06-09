@@ -47,8 +47,8 @@
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]]()
-This is a recipe application. The goal of this project was to learn MERN stack (MongoDB, Express, React, Next.js). The user is able to register and login, create recipies, and save recipes.
-
+This project is a recipe-sharing platform built using the MERN stack (MongoDB, Express, React, Node.js). Users can create an account, add their own recipes, and save them for future reference. 
+The primary goal of this project is to gain hands-on experience with the MERN stack.
 
 ### Built With
 
